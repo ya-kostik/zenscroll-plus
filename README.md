@@ -26,8 +26,8 @@ scroll.scrollToCenterOfY(el) // scroll to container's element ceneter only along
 scroll.scrollToCenterOfX(el) // scroll to container's element ceneter only along the X axis
 ```
 
-For more methods you can read JSDoc in the [zenscroll.js source file](https://github.com/ya-kostik/zenscroll-plus/blob/master/zenscroll.js)
+For more methods you can read JSDoc in the [zenscroll.js source file][1]
 
-## Warning
+If you want to use transpiled version, you must import module from `zenscroll-plus/build/zenscroll`.
 
-This version is ES2015 (ES6) only. You can add a babel through Pull Request.
+[1]: https://github.com/ya-kostik/zenscroll-plus/blob/master/zenscroll.js
