@@ -5,5 +5,14 @@
   "main": "zenscroll.js",
   "repository": "https://github.com/ya-kostik/zenscroll-plus",
   "author": "Constantin T.",
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "scripts": {
+    "build": "NODE_ENV=production ./node_modules/babel-cli/bin/babel.js zenscroll.js -d build/",
+    "postinstall": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0"
+  }
 }
