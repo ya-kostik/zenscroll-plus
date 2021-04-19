@@ -1,18 +1,25 @@
 {
   "name": "zenscroll-plus",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Rewrited and extended version of the original zenscroll https://github.com/zengabor/zenscroll",
   "main": "zenscroll.js",
   "repository": "https://github.com/ya-kostik/zenscroll-plus",
   "author": "Constantin T.",
   "license": "Unlicense",
+  "files": [
+    "zenscroll.js",
+    "build/zenscroll.js"
+  ],
   "scripts": {
+    "lint": "eslint ./",
     "build": "NODE_ENV=production ./node_modules/babel-cli/bin/babel.js zenscroll.js -d build/",
-    "postinstall": "npm run build"
+    "tarball": "tarball=\"$(npm pack .)\"; wc -c \"${tarball}\"; tar tvf \"${tarball}\"; rm \"${tarball}\";",
+    "prepublishOnly": "yarn build && yarn tarball"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.2.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "^7.24.0"
   }
 }
