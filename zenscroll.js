@@ -80,12 +80,10 @@ class Zenscroll {
 
   set scrollTimeoutIdY(value) {
     this.__props.scrollTimeoutIdY = value;
-    return value;
   }
 
   set scrollTimeoutIdX(value) {
     this.__props.scrollTimeoutIdX = value;
-    return value;
   }
 
   get y() {
@@ -370,7 +368,7 @@ class Zenscroll {
             // Calculate the absolute vertical position:
             var x = Math.max(0, Math.floor(startX + distance * (p < 0.5 ? 2 * p * p : p * (4 - p * 2) - 1)))
             this.toX(x)
-            if (p < 1 && (this.getHeight() + x) < this.container.scrollWidth) {
+            if (p < 1 && (this.getWidth() + x) < this.container.scrollWidth) {
               loopScroll();
             } else {
               setTimeout(this.stopScrollX, 99) // with cooldown time
