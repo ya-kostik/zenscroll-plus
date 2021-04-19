@@ -1,6 +1,6 @@
 {
   "name": "zenscroll-plus",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Rewrited and extended version of the original zenscroll https://github.com/zengabor/zenscroll",
   "main": "zenscroll.js",
   "repository": "https://github.com/ya-kostik/zenscroll-plus",
